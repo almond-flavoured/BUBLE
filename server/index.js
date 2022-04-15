@@ -18,14 +18,6 @@ app.use('/', indexRouter);
 // /:user_id/buy,sell,borrow 한 곳에? post에 따라? getdp Efk?
 // /signout, signin, signup
 
-https
-  .createServer(
-    {
-      key: fs.readFileSync(__dirname + '/key.pem', 'utf-8'),
-      cert: fs.readFileSync(__dirname + '/cert.pem', 'utf-8'),
-    },
-    app.use('/', (req, res) => {
-      res.send('Congrats! You made https server now :)');
-    })
-  )
-  .listen(port);
+app.listen(port, () => {
+  console.log(`서버가 ${port}번에서 작동중입니다.`);
+});
