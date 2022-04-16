@@ -21,7 +21,7 @@ function Basket({ isLogin, setIsLogin, userInfo }) {
     id = Number(id);
     const accessToken = window.localStorage.getItem('accessToken');
     await axios({
-      url: `https://localhost:4000/likes/${id}/buy`,
+      url: `http://localhost:4000/likes/${id}/buy`,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',

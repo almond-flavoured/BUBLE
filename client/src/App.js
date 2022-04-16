@@ -31,7 +31,7 @@ export default function App() {
     console.log(email, password);
     let answer = await axios
       .post(
-        'https://localhost:4000/users/signin',
+        'http://localhost:4000/users/signin',
         JSON.stringify({ email, password }), // data can be `string` or {object}!
         {
           headers: {
@@ -58,7 +58,7 @@ export default function App() {
 
     let answer = await axios
       .post(
-        'https://localhost:4000/users/signup',
+        'http://localhost:4000/users/signup',
         JSON.stringify({ email, password, favBrand, userName, phoneNumber }), // data can be `string` or {object}!
         {
           headers: {

@@ -283,7 +283,7 @@ const Landing = ({ isLogin, userInfo, setIsLogin }) => {
 
   const handleClickPopular = async () => {
     await axios({
-      url: `https://localhost:4000/items/popular`,
+      url: `http://localhost:4000/items/popular`,
       method: 'get',
     }).then((res) => {
       const { popular } = res.data;
@@ -298,7 +298,7 @@ const Landing = ({ isLogin, userInfo, setIsLogin }) => {
     id = Number(id);
     const accessToken = window.localStorage.getItem('accessToken');
     await axios({
-      url: `https://localhost:4000/items/${id}/fav`,
+      url: `http://localhost:4000/items/${id}/fav`,
       method: 'get',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
@@ -324,7 +324,7 @@ const Landing = ({ isLogin, userInfo, setIsLogin }) => {
 
   const handlePopularItem = async () => {
     await axios({
-      url: `https://localhost:4000/items/popular`,
+      url: `http://localhost:4000/items/popular`,
       method: 'GET',
     }).then((res) => {
       const { popular } = res.data;
@@ -336,7 +336,7 @@ const Landing = ({ isLogin, userInfo, setIsLogin }) => {
     id = Number(id);
     const accessToken = window.localStorage.getItem('accessToken');
     await axios({
-      url: `https://localhost:4000/items/${id}/fav`,
+      url: `http://localhost:4000/items/${id}/fav`,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
@@ -362,7 +362,7 @@ const Landing = ({ isLogin, userInfo, setIsLogin }) => {
     const accessToken = window.localStorage.getItem('accessToken');
 
     await axios({
-      url: `https://localhost:4000/likes/${id}/buy`,
+      url: `http://localhost:4000/likes/${id}/buy`,
       method: 'POST',
       data: { userid: id, itemid: value },
       headers: {

@@ -70,7 +70,7 @@ const Mypage = ({ userInfo, setIsLogin, isLogin }) => {
     console.log(id, accessToken);
     console.log(`https://localhost:4000/orders/${id}/${endpoint}`);
     let answer = await axios({
-      url: `https://localhost:4000/orders/${id}/${endpoint}`,
+      url: `http://localhost:4000/orders/${id}/${endpoint}`,
       method: 'GET', // or 'PUT'
       // data can be `string` or {object}!
       headers: {

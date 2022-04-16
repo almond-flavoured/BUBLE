@@ -15,7 +15,7 @@ const Header = ({ isLogin, setIsLogin }) => {
     } //accessToken삭제
     //cookie에서 refreshToken 삭제 필요
     let answer = await axios({
-      url: 'https://localhost:4000/users/signout',
+      url: 'http://localhost:4000/users/signout',
       method: 'POST', // or 'PUT'
       // data can be `string` or {object}!
       headers: {
